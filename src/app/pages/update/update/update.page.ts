@@ -4,12 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-update',
   templateUrl: './update.page.html',
   styleUrls: ['./update.page.scss'],
+  standalone: false,
 })
 export class UpdatePage implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
