@@ -5,7 +5,7 @@
 
   <ion-card-content>
     <div>
-      <form [formGroup]="form">
+      <form [formGroup]="RegisterForm">
         <app-input
           label="Name"
           placeholder="jane"
@@ -40,6 +40,14 @@
           type="confirmPassword"
           formControlName="confirmPassword"
         ></app-input>
+
+        <app-button
+          label="Register"
+          [type]="'submit'"
+          [disabled]="!RegisterForm.valid"
+          (click)="Register()"
+        >
+        </app-button>
 
         <ion-router-link class="link" routerLink="/login">
           Already have an account? Login

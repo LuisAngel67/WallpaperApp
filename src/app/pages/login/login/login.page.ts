@@ -8,14 +8,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   standalone: false,
 })
 export class LoginPage implements OnInit {
-  form!: FormGroup;
+  LoginForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.form = this.fb.group({
+    this.LoginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
     });
+  }
+
+  login() {
+    console.log(this.LoginForm.value);
   }
 }

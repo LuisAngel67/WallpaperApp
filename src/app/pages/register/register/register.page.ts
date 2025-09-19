@@ -9,17 +9,21 @@ import { last } from 'rxjs';
   standalone: false,
 })
 export class RegisterPage implements OnInit {
-  form!: FormGroup;
+  RegisterForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.form = this.fb.group({
+    this.RegisterForm = this.fb.group({
       name: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
     });
+  }
+
+  Register() {
+    console.log(this.RegisterForm.value);
   }
 }
