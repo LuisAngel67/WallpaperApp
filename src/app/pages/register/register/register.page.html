@@ -1,13 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Register</ion-card-title>
+  </ion-card-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-card-content>
+    <div>
+      <form [formGroup]="form">
+        <app-input
+          label="Name"
+          placeholder="jane"
+          type="name"
+          formControlName="name"
+        ></app-input>
+
+        <app-input
+          label="Last name"
+          placeholder="doe"
+          type="lastName"
+          formControlName="lastName"
+        ></app-input>
+
+        <app-input
+          label="Email"
+          placeholder="example@gmail.com"
+          type="email"
+          formControlName="email"
+        ></app-input>
+
+        <app-input
+          label="Password"
+          placeholder="*******"
+          type="Password"
+          formControlName="password"
+        ></app-input>
+
+        <app-input
+          label="Confirm Password"
+          placeholder="*******"
+          type="confirmPassword"
+          formControlName="confirmPassword"
+        ></app-input>
+
+        <ion-router-link class="link" routerLink="/login">
+          Already have an account? Login
+        </ion-router-link>
+      </form>
+    </div>
+  </ion-card-content>
+</ion-card>
