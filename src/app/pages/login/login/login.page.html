@@ -4,10 +4,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Login</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div>
+      <form [formGroup]="form">
+        <app-input
+          label="Email"
+          placeholder="example@gmail.com"
+          type="email"
+          formControlName="email"
+        ></app-input>
+
+        <app-input
+          label="Password"
+          placeholder="*******"
+          type="Password"
+          formControlName="password"
+        ></app-input>
+
+        <ion-router-link class="link" routerLink="/register">
+          Don't have an account? Register
+        </ion-router-link>
+      </form>
+    </div>
+  </ion-card-content>
+</ion-card>
