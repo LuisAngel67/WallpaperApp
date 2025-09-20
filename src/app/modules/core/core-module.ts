@@ -4,8 +4,10 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { Auth } from './providers/auth/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { Query } from './providers/query/query';
 
-const providers = [Auth];
+const providers = [Auth, Query];
 
 @NgModule({
   declarations: [],
@@ -13,6 +15,7 @@ const providers = [Auth];
   providers: [
     provideFirebaseApp(() => initializeApp(environment.FIREBASE_CONFIG)),
     provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
     providers,
   ],
 })
