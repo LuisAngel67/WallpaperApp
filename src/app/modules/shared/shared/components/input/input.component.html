@@ -1,5 +1,7 @@
-<ion-item>
-  <ion-label>{{ label }}</ion-label>
+<ion-item fill="outline" class="custom-input">
+  <ion-label class="floating-label" [class.active]="isFocused">{{
+    label
+  }}</ion-label>
   <ion-input
     [type]="type"
     [value]="value"
