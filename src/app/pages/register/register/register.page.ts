@@ -23,7 +23,7 @@ export class RegisterPage implements OnInit {
     });
   }
 
-  Register() {
+  DoRegister() {
     console.log(this.RegisterForm.value);
   }
 }

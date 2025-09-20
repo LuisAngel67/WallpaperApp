@@ -5,7 +5,7 @@
 
   <ion-card-content>
     <div>
-      <form [formGroup]="RegisterForm">
+      <form [formGroup]="RegisterForm" (ngSubmit)="DoRegister()">
         <app-input
           label="Name"
           placeholder="jane"
@@ -45,7 +45,6 @@
           label="Register"
           [type]="'submit'"
           [disabled]="!RegisterForm.valid"
-          (click)="Register()"
         >
         </app-button>
 
