@@ -3,10 +3,17 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { InputComponent } from './components/input/input.component';
 import { ButtonComponent } from './components/button/button.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { User } from './services/user/user';
+
+const modules = [CommonModule, IonicModule, FormsModule, ReactiveFormsModule];
+const components = [InputComponent, ButtonComponent];
+const providers = [User];
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent],
-  imports: [CommonModule, IonicModule],
-  exports: [InputComponent, ButtonComponent],
+  declarations: [components],
+  imports: [modules],
+  providers: [providers],
+  exports: [components, modules],
 })
 export class SharedModule {}

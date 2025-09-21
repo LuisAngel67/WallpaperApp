@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IUserCreated } from 'src/app/interfaces/userInterface';
 import { Auth } from 'src/app/modules/core/providers/auth/auth';
 import { Query } from 'src/app/modules/core/providers/query/query';
 
@@ -10,4 +11,14 @@ export class User {
     private readonly authSrv: Auth,
     private readonly querySrv: Query
   ) {}
+
+  async create(user: IUserCreated): Promise<void> {
+    try {
+      await this.authSrv.register(user.email, user.password);
+      await this.querySrv.create('users', {
+        name: user.name,
+        lastName: user.lastName,
+      });
+    } catch (error) {}
+  }
 }
