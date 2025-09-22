@@ -6,9 +6,15 @@ import { ButtonComponent } from './components/button/button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { User } from './services/user/user';
 import { LinkComponent } from './components/link/link.component';
+import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 
 const modules = [CommonModule, IonicModule, FormsModule, ReactiveFormsModule];
-const components = [InputComponent, ButtonComponent, LinkComponent];
+const components = [
+  InputComponent,
+  ButtonComponent,
+  LinkComponent,
+  FloatingButtonComponent,
+];
 const providers = [User];
 
 @NgModule({
