@@ -28,9 +28,11 @@
         >
         </app-button>
 
-        <ion-router-link class="link" routerLink="/register">
-          Don't have an account? Register
-        </ion-router-link>
+        <app-link
+          class="link"
+          [to]="'/register'"
+          label="Don't have an account? Register"
+        ></app-link>
       </form>
     </div>
   </ion-card-content>

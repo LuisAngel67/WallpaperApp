@@ -48,9 +48,11 @@
         >
         </app-button>
 
-        <ion-router-link class="link" routerLink="/login">
-          Already have an account? Login
-        </ion-router-link>
+        <app-link
+          class="link"
+          [to]="'/login'"
+          label="Already have an account? Login"
+        ></app-link>
       </form>
     </div>
   </ion-card-content>
