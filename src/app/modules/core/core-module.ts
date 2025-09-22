@@ -6,8 +6,9 @@ import { environment } from 'src/environments/environment';
 import { Auth } from './providers/auth/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { Query } from './providers/query/query';
+import { ToastService } from './providers/toast/toast';
 
-const providers = [Auth, Query];
+const providers = [Auth, Query, ToastService];
 
 @NgModule({
   declarations: [],
