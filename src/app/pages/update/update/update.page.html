@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>update</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Update Profile</ion-card-title>
+  </ion-card-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">update</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-card-content>
+    <div>
+      <form [formGroup]="UpdateForm">
+        <app-input label="Name" type="name" formControlName="name"></app-input>
+
+        <app-input
+          label="Last Name"
+          type="lastName"
+          formControlName="lastName"
+        ></app-input>
+
+        <app-button
+          label="Update"
+          [type]="'submit'"
+          [disabled]="!UpdateForm.valid"
+          (click)="update()"
+        >
+        </app-button>
+
+        <app-button label="Cancel" (click)="cancelUpdate()"> </app-button>
+      </form>
+    </div>
+  </ion-card-content>
+</ion-card>

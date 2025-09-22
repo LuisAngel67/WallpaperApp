@@ -7,14 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { UpdatePageRoutingModule } from './update-routing.module';
 
 import { UpdatePage } from './update.page';
+import { share } from 'rxjs';
+import { SharedModule } from 'src/app/modules/shared/shared/shared-module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    UpdatePageRoutingModule
+    UpdatePageRoutingModule,
+    SharedModule,
   ],
-  declarations: [UpdatePage]
+  declarations: [UpdatePage],
 })
 export class UpdatePageModule {}
