@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Auth as AuthFirebase } from '@angular/fire/auth';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root',
@@ -17,5 +20,7 @@ export class Auth {
     return resp.user.uid;
   }
 
-  async login(email: string, password: string) {}
+  async login(email: string, password: string) {
+    return await signInWithEmailAndPassword(this.authFirebase, email, password);
+  }
 }
