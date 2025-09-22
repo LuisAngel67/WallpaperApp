@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/modules/shared/shared/services/user/user';
 import { Router } from '@angular/router';
+import { ToastService } from 'src/app/modules/core/providers/toast/toast';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +16,8 @@ export class RegisterPage implements OnInit {
   constructor(
     private fb: FormBuilder,
     private readonly userSrv: User,
-    private router: Router
+    private router: Router,
+    private toast: ToastService
   ) {}
 
   ngOnInit() {
@@ -30,6 +32,7 @@ export class RegisterPage implements OnInit {
 
   public async DoRegister() {
     await this.userSrv.create(this.RegisterForm.value);
+    await this.toast.show('Usuario created succesfully ✅', 'long');
     this.router.navigate(['/login']);
   }
 }
