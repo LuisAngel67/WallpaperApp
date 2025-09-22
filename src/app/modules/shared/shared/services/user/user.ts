@@ -14,11 +14,13 @@ export class User {
 
   async create(user: IUserCreated): Promise<void> {
     try {
-      await this.authSrv.register(user.email, user.password);
-      await this.querySrv.create('users', {
+      const uid = await this.authSrv.register(user.email, user.password);
+      await this.querySrv.set('users', uid, {
         name: user.name,
         lastName: user.lastName,
       });
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

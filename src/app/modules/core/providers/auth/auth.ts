@@ -9,7 +9,12 @@ export class Auth {
   constructor(private readonly authFirebase: AuthFirebase) {}
 
   async register(email: string, password: string) {
-    await createUserWithEmailAndPassword(this.authFirebase, email, password);
+    const resp = await createUserWithEmailAndPassword(
+      this.authFirebase,
+      email,
+      password
+    );
+    return resp.user.uid;
   }
 
   async login(email: string, password: string) {}
