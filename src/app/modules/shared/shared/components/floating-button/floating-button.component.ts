@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth, signOut } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-floating-button',
@@ -8,11 +9,16 @@ import { Router } from '@angular/router';
   standalone: false,
 })
 export class FloatingButtonComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private auth: Auth) {}
 
   ngOnInit() {}
 
   goToUpdate() {
     this.router.navigate(['/update']);
+  }
+
+  async logOut() {
+    await signOut(this.auth);
+    this.router.navigate(['/login']);
   }
 }
