@@ -34,5 +34,12 @@
 
   "LOADING": {
     "UPLOAD_IMAGE": "Uploading image..."
+  },
+
+  "ACTIONSHEET": {
+    "HEADER": "Select an option",
+    "WALLPAPER": "Set as wallpaper",
+    "LOCKSCREEN": "Set as Lock wallpaper",
+    "CANCEL": "Cancel"
   }
 }

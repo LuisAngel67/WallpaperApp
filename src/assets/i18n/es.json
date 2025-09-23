@@ -34,5 +34,12 @@
 
   "LOADING": {
     "UPLOAD_IMAGE": "Subiendo imagen..."
+  },
+
+  "ACTIONSHEET": {
+    "HEADER": "Selecciona una opción",
+    "WALLPAPER": "Establecer como fondo de pantalla",
+    "LOCKSCREEN": "Establecer como fondo de pantalla de bloqueo",
+    "CANCEL": "Cancelar"
   }
 }
