@@ -7,8 +7,9 @@ import { Auth } from './providers/auth/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { Query } from './providers/query/query';
 import { ToastService } from './providers/toast/toast';
+import { Uploader } from './providers/uploader/uploader';
 
-const providers = [Auth, Query, ToastService];
+const providers = [Auth, Query, ToastService, Uploader];
 
 @NgModule({
   declarations: [],
