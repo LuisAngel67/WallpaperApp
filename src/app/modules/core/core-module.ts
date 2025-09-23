@@ -13,6 +13,7 @@ import { AddedImage } from './providers/addedImage/added-image';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AppTranslateService } from './providers/translate/translate';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,6 +26,7 @@ const providers = [
   Uploader,
   saveImageService,
   AddedImage,
+  AppTranslateService,
 ];
 
 @NgModule({

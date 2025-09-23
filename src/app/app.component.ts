@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
+import { AppTranslateService } from './modules/core/providers/translate/translate';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,15 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private platform: Platform,
+    private appTranslate: AppTranslateService
+  ) {
+    this.initializeApp();
+  }
+
+  async initializeApp() {
+    await this.platform.ready();
+    await this.appTranslate.init();
+  }
 }
