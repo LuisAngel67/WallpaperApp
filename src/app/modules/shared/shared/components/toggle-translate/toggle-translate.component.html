@@ -1,4 +1,10 @@
-<ion-segment [value]="current" (ionChange)="change($event)">
-  <ion-segment-button value="en"> EN </ion-segment-button>
-  <ion-segment-button value="es"> ES </ion-segment-button>
-</ion-segment>
+<div class="language-toggle">
+  <ion-button fill="clear" (click)="toggleDropdown()">
+    {{ current.toUpperCase() }}
+  </ion-button>
+
+  <div *ngIf="showDropdown" class="dropdown">
+    <ion-item button (click)="selectLang('en')">English</ion-item>
+    <ion-item button (click)="selectLang('es')">Español</ion-item>
+  </div>
+</div>

@@ -1,28 +1,37 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Update Profile</ion-card-title>
+    <ion-card-title>{{ 'UPDATE.TITLE' | translate }}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
     <div>
       <form [formGroup]="UpdateForm">
-        <app-input label="Name" type="name" formControlName="name"></app-input>
+        <app-toggle-translate></app-toggle-translate>
+        <app-input
+          [label]="'UPDATE.NAME' | translate"
+          type="name"
+          formControlName="name"
+        ></app-input>
 
         <app-input
-          label="Last Name"
+          [label]="'UPDATE.LAST_NAME' | translate"
           type="lastName"
           formControlName="lastName"
         ></app-input>
 
         <app-button
-          label="Update"
+          [label]="'UPDATE.UPDATE_BTN' | translate"
           [type]="'submit'"
           [disabled]="!UpdateForm.valid"
           (click)="update()"
         >
         </app-button>
 
-        <app-button label="Cancel" (click)="cancelUpdate()"> </app-button>
+        <app-button
+          [label]="'UPDATE.CANCEL_BTN' | translate"
+          (click)="cancelUpdate()"
+        >
+        </app-button>
       </form>
     </div>
   </ion-card-content>

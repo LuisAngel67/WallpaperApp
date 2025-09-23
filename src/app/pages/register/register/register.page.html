@@ -1,48 +1,49 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Register</ion-card-title>
+    <ion-card-title>{{ 'REGISTER.TITLE' | translate }}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
     <div>
       <form [formGroup]="RegisterForm" (ngSubmit)="DoRegister()">
+        <app-toggle-translate></app-toggle-translate>
         <app-input
-          label="Name"
+          [label]="'REGISTER.NAME' | translate"
           placeholder="jane"
           type="name"
           formControlName="name"
         ></app-input>
 
         <app-input
-          label="Last name"
+          [label]="'REGISTER.LAST_NAME' | translate"
           placeholder="doe"
           type="lastName"
           formControlName="lastName"
         ></app-input>
 
         <app-input
-          label="Email"
+          [label]="'REGISTER.EMAIL' | translate"
           placeholder="example@gmail.com"
           type="email"
           formControlName="email"
         ></app-input>
 
         <app-input
-          label="Password"
+          [label]="'REGISTER.PASSWORD' | translate"
           placeholder="*******"
           type="Password"
           formControlName="password"
         ></app-input>
 
         <app-input
-          label="Confirm Password"
+          [label]="'REGISTER.CONFIRM_PASSWORD' | translate"
           placeholder="*******"
           type="password"
           formControlName="confirmPassword"
         ></app-input>
 
         <app-button
-          label="Register"
+          [label]="'REGISTER.REGISTER_BTN' | translate"
           [type]="'submit'"
           [disabled]="!RegisterForm.valid"
         >
@@ -51,7 +52,7 @@
         <app-link
           class="link"
           [to]="'/login'"
-          label="Already have an account? Login"
+          [label]="'REGISTER.LINK' | translate"
         ></app-link>
       </form>
     </div>

@@ -5,5 +5,30 @@
     "PASSWORD": "Contraseña",
     "LOGIN_BTN": "Iniciar sesión",
     "LINK": "No tienes una cuenta? Regístrate"
+  },
+
+  "REGISTER": {
+    "TITLE": "REGISTRARSE",
+    "NAME": "Nombre",
+    "LAST_NAME": "Apellido",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "CONFIRM_PASSWORD": "Confirmar Contraseña",
+    "REGISTER_BTN": "Registrarse",
+    "LINK": "¿Ya tienes una cuenta? Iniciar sesión"
+  },
+
+  "HOME": {
+    "MS1": "Hola!",
+    "MS2": "Tus fondos de pantalla",
+    "MS3": "No hay imágenes subidas aún"
+  },
+
+  "UPDATE": {
+    "TITLE": "ACTUALIZAR PERFIL",
+    "NAME": "Nombre",
+    "LAST_NAME": "Apellido",
+    "UPDATE_BTN": "Actualizar",
+    "CANCEL_BTN": "Cancelar"
   }
 }

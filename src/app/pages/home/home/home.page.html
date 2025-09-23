@@ -1,12 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Welcome {{ userName ? ', ' + userName : '' }} </ion-title>
+    <ion-title
+      >{{ 'HOME.MS1' | translate }}{{ userName ? ', ' + userName : '' }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div>
+    <p>{{ 'HOME.MS2' | translate }}</p>
+  </div>
+
   <div *ngIf="images.length === 0" class="empty">
-    <p>No images uploaded yet.</p>
+    <p>{{ 'HOME.MS3' | translate }}</p>
   </div>
 
   <div *ngFor="let img of images">

@@ -5,5 +5,30 @@
     "PASSWORD": "Password",
     "LOGIN_BTN": "Log in",
     "LINK": "Don't have an account? Sign up"
+  },
+
+  "REGISTER": {
+    "TITLE": "REGISTER",
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "REGISTER_BTN": "Register",
+    "LINK": "Already have an account? Login"
+  },
+
+  "HOME": {
+    "MS1": "Hi!",
+    "MS2": "Your wallpapers",
+    "MS3": "No images uploaded yet."
+  },
+
+  "UPDATE": {
+    "TITLE": "UPDATE PROFILE",
+    "NAME": "Name",
+    "LAST_NAME": "Last Name",
+    "UPDATE_BTN": "Update",
+    "CANCEL_BTN": "Cancel"
   }
 }

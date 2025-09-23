@@ -9,6 +9,7 @@ import { AppTranslateService } from 'src/app/modules/core/providers/translate/tr
 })
 export class ToggleTranslateComponent implements OnInit {
   current = 'en';
+  showDropdown = false;
 
   constructor(private appTranslate: AppTranslateService) {}
 
@@ -16,9 +17,13 @@ export class ToggleTranslateComponent implements OnInit {
     this.current = this.appTranslate.getCurrentLang();
   }
 
-  async change(ev: any) {
-    const value = ev.detail?.value ?? ev;
-    await this.appTranslate.useLanguage(value);
-    this.current = value;
+  toggleDropdown() {
+    this.showDropdown = !this.showDropdown;
+  }
+
+  async selectLang(lang: string) {
+    await this.appTranslate.useLanguage(lang);
+    this.current = lang;
+    this.showDropdown = false;
   }
 }

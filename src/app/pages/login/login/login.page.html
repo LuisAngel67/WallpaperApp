@@ -6,6 +6,7 @@
   <ion-card-content>
     <div>
       <form [formGroup]="LoginForm">
+        <app-toggle-translate></app-toggle-translate>
         <app-input
           [label]="'LOGIN.EMAIL' | translate"
           placeholder="example@gmail.com"
@@ -33,8 +34,6 @@
           [to]="'/register'"
           [label]="'LOGIN.LINK' | translate"
         ></app-link>
-
-        <app-toggle-translate></app-toggle-translate>
       </form>
     </div>
   </ion-card-content>
