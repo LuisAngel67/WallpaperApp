@@ -8,6 +8,7 @@ import { User } from './services/user/user';
 import { LinkComponent } from './components/link/link.component';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 import { CardComponent } from './components/card/card.component';
+import { ToggleTranslateComponent } from './components/toggle-translate/toggle-translate.component';
 
 const modules = [CommonModule, IonicModule, FormsModule, ReactiveFormsModule];
 const components = [
@@ -16,6 +17,7 @@ const components = [
   LinkComponent,
   FloatingButtonComponent,
   CardComponent,
+  ToggleTranslateComponent,
 ];
 const providers = [User];
 
