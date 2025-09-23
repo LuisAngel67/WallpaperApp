@@ -30,5 +30,9 @@
     "LAST_NAME": "Apellido",
     "UPDATE_BTN": "Actualizar",
     "CANCEL_BTN": "Cancelar"
+  },
+
+  "LOADING": {
+    "UPLOAD_IMAGE": "Subiendo imagen..."
   }
 }

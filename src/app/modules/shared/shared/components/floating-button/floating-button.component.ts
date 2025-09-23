@@ -5,6 +5,7 @@ import { FileService } from 'src/app/modules/core/providers/file/file';
 import { Uploader } from 'src/app/modules/core/providers/uploader/uploader';
 import { saveImageService } from 'src/app/modules/core/providers/saveImage/save-image';
 import { AddedImage } from 'src/app/modules/core/providers/addedImage/added-image';
+import { Loading } from 'src/app/modules/core/providers/loading/loading';
 
 @Component({
   selector: 'app-floating-button',
@@ -19,7 +20,8 @@ export class FloatingButtonComponent implements OnInit {
     private fileService: FileService,
     private uploader: Uploader,
     private saveImageService: saveImageService,
-    private addedImage: AddedImage
+    private addedImage: AddedImage,
+    private loading: Loading
   ) {}
 
   ngOnInit() {}
@@ -39,6 +41,8 @@ export class FloatingButtonComponent implements OnInit {
       console.log('No image selected');
       return;
     }
+
+    await this.loading.present('LOADING.UPLOAD_IMAGE');
 
     try {
       let blob: Blob;
@@ -79,6 +83,8 @@ export class FloatingButtonComponent implements OnInit {
       }
     } catch (err) {
       console.error('Error picking/uploading image:', err);
+    } finally {
+      await this.loading.dismiss();
     }
   }
 }
