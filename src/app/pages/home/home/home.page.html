@@ -1,9 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Welcome{{ userName ? ', ' + userName : '' }} </ion-title>
+    <ion-title>
+      Welcome to wallpaper app {{ userName ? ', ' + userName : '' }}
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div *ngIf="images.length === 0" class="empty">
+    <p>No images uploaded yet.</p>
+  </div>
+
+  <div *ngFor="let img of images">
+    <app-card [imageUrl]="img"></app-card>
+  </div>
+
   <app-floating-button> </app-floating-button>
 </ion-content>

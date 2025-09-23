@@ -5,6 +5,7 @@ import {
   User,
 } from '@angular/fire/auth';
 import { Firestore, doc, getDoc } from '@angular/fire/firestore';
+import { saveImageService } from 'src/app/modules/core/providers/saveImage/save-image';
 
 @Component({
   selector: 'app-home',
@@ -13,11 +14,17 @@ import { Firestore, doc, getDoc } from '@angular/fire/firestore';
   standalone: false,
 })
 export class HomePage implements OnInit {
+  images: string[] = [];
   userName: string = '';
 
-  constructor(private auth: AuthFirebase, private firestore: Firestore) {}
+  constructor(
+    private auth: AuthFirebase,
+    private firestore: Firestore,
+    private saveImageService: saveImageService
+  ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.images = await this.saveImageService.getUserImages();
     onAuthStateChanged(this.auth, async (user: User | null) => {
       if (user) {
         const userDoc = doc(this.firestore, 'users', user.uid);
