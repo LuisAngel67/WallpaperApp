@@ -4,6 +4,7 @@ import { Auth, signOut } from '@angular/fire/auth';
 import { FileService } from 'src/app/modules/core/providers/file/file';
 import { Uploader } from 'src/app/modules/core/providers/uploader/uploader';
 import { saveImageService } from 'src/app/modules/core/providers/saveImage/save-image';
+import { AddedImage } from 'src/app/modules/core/providers/addedImage/added-image';
 
 @Component({
   selector: 'app-floating-button',
@@ -17,7 +18,8 @@ export class FloatingButtonComponent implements OnInit {
     private auth: Auth,
     private fileService: FileService,
     private uploader: Uploader,
-    private saveImageService: saveImageService
+    private saveImageService: saveImageService,
+    private addedImage: AddedImage
   ) {}
 
   ngOnInit() {}
@@ -73,6 +75,7 @@ export class FloatingButtonComponent implements OnInit {
 
       if (url) {
         await this.saveImageService.saveImage(url);
+        this.addedImage.notifyImageAdded();
       }
     } catch (err) {
       console.error('Error picking/uploading image:', err);
