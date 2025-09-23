@@ -1,7 +1,9 @@
 {
   "LOGIN": {
+    "TITLE": "Login",
     "EMAIL": "Email",
     "PASSWORD": "Password",
-    "LOGIN_BTN": "Log in"
+    "LOGIN_BTN": "Log in",
+    "LINK": "Don't have an account? Sign up"
   }
 }

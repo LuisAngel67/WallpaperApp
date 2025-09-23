@@ -1,27 +1,27 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Login</ion-card-title>
+    <ion-card-title>{{ 'LOGIN.TITLE' | translate }}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
     <div>
       <form [formGroup]="LoginForm">
         <app-input
-          label="Email"
+          [label]="'LOGIN.EMAIL' | translate"
           placeholder="example@gmail.com"
           type="email"
           formControlName="email"
         ></app-input>
 
         <app-input
-          label="Password"
+          [label]="'LOGIN.PASSWORD' | translate"
           placeholder="*******"
           type="Password"
           formControlName="password"
         ></app-input>
 
         <app-button
-          label="Login"
+          [label]="'LOGIN.LOGIN_BTN' | translate"
           [type]="'submit'"
           [disabled]="!LoginForm.valid"
           (click)="login()"
@@ -31,8 +31,10 @@
         <app-link
           class="link"
           [to]="'/register'"
-          label="Don't have an account? Register"
+          [label]="'LOGIN.LINK' | translate"
         ></app-link>
+
+        <app-toggle-translate></app-toggle-translate>
       </form>
     </div>
   </ion-card-content>

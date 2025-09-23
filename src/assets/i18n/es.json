@@ -1,7 +1,9 @@
 {
   "LOGIN": {
+    "TITLE": "INICIAR SESION",
     "EMAIL": "Correo electrónico",
     "PASSWORD": "Contraseña",
-    "LOGIN_BTN": "Iniciar sesión"
+    "LOGIN_BTN": "Iniciar sesión",
+    "LINK": "No tienes una cuenta? Regístrate"
   }
 }

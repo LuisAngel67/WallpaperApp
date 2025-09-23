@@ -9,8 +9,15 @@ import { LinkComponent } from './components/link/link.component';
 import { FloatingButtonComponent } from './components/floating-button/floating-button.component';
 import { CardComponent } from './components/card/card.component';
 import { ToggleTranslateComponent } from './components/toggle-translate/toggle-translate.component';
+import { TranslateModule } from '@ngx-translate/core';
 
-const modules = [CommonModule, IonicModule, FormsModule, ReactiveFormsModule];
+const modules = [
+  CommonModule,
+  IonicModule,
+  FormsModule,
+  ReactiveFormsModule,
+  TranslateModule,
+];
 const components = [
   InputComponent,
   ButtonComponent,
