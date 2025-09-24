@@ -1,0 +1,18 @@
+ion-fab-button {
+  --background: #e53935;
+  --background-activated: #c62828; 
+  --background-hover: #d32f2f;
+  --color: #fff;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+ion-fab-list ion-fab-button {
+  --background: #f5f5f5; 
+  --color: #e53935; 
+  --box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}

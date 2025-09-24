@@ -1,0 +1,17 @@
+a {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e53935;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &.disabled {
+    color: gray;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}

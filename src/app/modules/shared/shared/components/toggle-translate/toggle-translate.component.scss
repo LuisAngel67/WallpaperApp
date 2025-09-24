@@ -2,17 +2,64 @@
   position: relative;
   display: inline-block;
 
+  ion-button {
+    --background: transparent;
+    --color: #e53935; // rojo principal
+    --ion-color-base: #e53935;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background 0.15s ease, transform 0.1s ease;
+
+    &:hover {
+      background: rgba(229, 57, 53, 0.06);
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+
   .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
+    min-width: 140px;
     background: var(--ion-background-color, #fff);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 8px;
     z-index: 10;
+    margin-top: 6px;
+    padding: 4px 0;
+    animation: dropdownIn 150ms ease-out;
 
     ion-item {
       --padding-start: 12px;
+      font-size: 0.95rem;
+      color: #222;
+      border-radius: 6px;
+      transition: background 0.15s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      &.selected {
+        font-weight: 600;
+        color: #c62828;
+        background: rgba(229, 57, 53, 0.08);
+      }
     }
+  }
+}
+
+@keyframes dropdownIn {
+  from {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

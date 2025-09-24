@@ -1,0 +1,22 @@
+.custom-button {
+  --background: #e53935; // rojo principal
+  --background-hover: #d32f2f; 
+  --background-activated: #c62828;
+  --border-radius: 8px;
+  --color: #fff; // texto blanco
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &.button-disabled {
+    --background: #bdbdbd;
+    --color: #f5f5f5;
+    --box-shadow: none;
+  }
+}

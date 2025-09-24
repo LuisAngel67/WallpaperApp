@@ -1,8 +1,8 @@
 .custom-input {
   position: relative;
   width: 300px;
- margin: 20px auto;
- overflow: visible;
+  margin: 20px auto;
+  overflow: visible;
 
   ion-label.floating-label {
     position: absolute;
@@ -12,12 +12,12 @@
     transition: all 0.2s ease;
     color: gray;
     pointer-events: none;
-     white-space: nowrap;
+    white-space: nowrap;
   }
 
   ion-label.floating-label.active {
     top: -10px;
     font-size: 0.8rem;
-    color: #3880ff;
+    color: #e53935;
   }
 }
